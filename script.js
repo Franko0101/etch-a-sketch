@@ -1,0 +1,12 @@
+const container = document.querySelector('#container');
+
+for (let i = 0; i < 256; i++) {
+    const div = document.createElement('div');
+    div.setAttribute('class', 'cell');
+    div.addEventListener('mouseover', () => {
+        div.setAttribute('style', 'background: red;');
+    });
+    
+    container.appendChild(div);
+}
+

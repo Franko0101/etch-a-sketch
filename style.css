@@ -1,0 +1,12 @@
+#container {
+    display: flex;
+    width: 960px;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.cell {
+    width: 55px;
+    height: 55px;
+    border: 2px solid gray;
+}
