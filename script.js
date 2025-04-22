@@ -21,7 +21,7 @@ function generateRandomColor() {
     const green = Math.floor(Math.random() * 256);
     const blue = Math.floor(Math.random() * 256);
 
-    return `rgb(${red}, ${green}, ${blue})`
+    return `rgb(${red} ${green} ${blue})`
 }
 
 function generateGrid(cellsPerSide) {
@@ -37,7 +37,8 @@ function generateGrid(cellsPerSide) {
             `
         );
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = generateRandomColor();
+            if (div.style.backgroundColor == '')
+                div.style.backgroundColor = generateRandomColor();
         });
     
         container.appendChild(div);
