@@ -20,8 +20,8 @@ function generateRandomColor() {
     const red = Math.floor(Math.random() * 256);
     const green = Math.floor(Math.random() * 256);
     const blue = Math.floor(Math.random() * 256);
-
-    return `rgb(${red} ${green} ${blue})`
+    
+    return `rgb(${red} ${green} ${blue})`;
 }
 
 function generateGrid(cellsPerSide) {
@@ -37,8 +37,13 @@ function generateGrid(cellsPerSide) {
             `
         );
         div.addEventListener('mouseover', () => {
-            if (div.style.backgroundColor == '')
+            if (div.style.backgroundColor == '') {
                 div.style.backgroundColor = generateRandomColor();
+                div.style.opacity = 0.1;
+            } else {
+                if (div.style.opacity < 1.0)
+                div.style.opacity = parseFloat(div.style.opacity) + 0.1;
+            }
         });
     
         container.appendChild(div);
