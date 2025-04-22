@@ -1,6 +1,7 @@
 #newGridContainer {
     text-align: center;
     margin: 16px auto;
+    color: rgb(255, 0, 0);
 }
 
 #container {
@@ -12,8 +13,8 @@
     margin: auto;
 }
 
-/* .cell {
+.cell {
     width: 58px;
     height: 58px;
-    border: 1px solid gray;
-} */
+    border: 1px solid rgb(128, 128, 128);
+}

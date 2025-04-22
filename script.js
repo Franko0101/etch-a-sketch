@@ -16,6 +16,14 @@ button.addEventListener('click', () => {
 
 //-----------------------------------------------------------//
 
+function generateRandomColor() {
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+
+    return `rgb(${red}, ${green}, ${blue})`
+}
+
 function generateGrid(cellsPerSide) {
     const totalCells = cellsPerSide * cellsPerSide;
     const cellSize = (GRID_SIZE / cellsPerSide) - 2;
@@ -29,7 +37,7 @@ function generateGrid(cellsPerSide) {
             `
         );
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = 'red';
+            div.style.backgroundColor = generateRandomColor();
         });
     
         container.appendChild(div);
@@ -41,7 +49,5 @@ function deleteGrid() {
         container.removeChild(container.firstChild);
     }
 }
-
-
 
 
