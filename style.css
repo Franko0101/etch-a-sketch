@@ -1,12 +1,19 @@
+#newGridContainer {
+    text-align: center;
+    margin: 16px auto;
+}
+
 #container {
     display: flex;
     width: 960px;
     height: auto;
     flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
 }
 
-.cell {
-    width: 55px;
-    height: 55px;
-    border: 2px solid gray;
-}
+/* .cell {
+    width: 58px;
+    height: 58px;
+    border: 1px solid gray;
+} */
